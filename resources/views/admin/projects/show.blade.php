@@ -6,6 +6,10 @@
             <div class="col">
 
                 <h1>{{ $project->name }}</h1>
+
+                @if($project->type)
+                    <h4><span class="badge bg-primary">{{ $project->type->name }}
+                @endif</span></h4>
                 @if ($project->img)
                     <div>
                         <img src="{{ asset('storage/' . $project->img) }}" alt="{{ $project->name }}">
