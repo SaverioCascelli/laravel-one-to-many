@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 
+
 .sc-main-container {
     height: calc(100vh - 56px);
 }
@@ -12,5 +13,26 @@ aside {
     a {
         color: white;
         text-decoration: none;
+    }
+}
+
+table {
+
+
+    .table-id {
+        width: 5%;
+    }
+
+    .table-name,
+    .table-client-name {
+        width: 30%;
+    }
+
+    .table-type {
+        width: 10%;
+    }
+
+    .table-actions {
+        width: 30%;
     }
 }
