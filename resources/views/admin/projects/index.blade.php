@@ -28,7 +28,7 @@
                                 <td class="">{{ $project->name }}</td>
                                 <td class="">{{ $project->client_name }}</td>
                                 <td>
-                                    <h4><span class="badge bg-primary">{{ $project->type->name }}</span></h4>
+                                    @if($project->type)<h4><span class="badge bg-primary">{{ $project->type->name }}@endif</span></h4>
 
                                 </td>
                                 <td class="">

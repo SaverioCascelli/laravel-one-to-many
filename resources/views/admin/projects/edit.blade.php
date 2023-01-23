@@ -29,13 +29,17 @@
             @enderror
         </div>
 
-        {{-- <select name="type_id" class="form-select" aria-label="type project select">
-            <option selected>Select project type</option>
-            @foreach ($project() as )
-            <option value=""></option>
-
-            @endforeach
-        </select> --}}
+        <div class="mb-3">
+            <label for="type_id" class="form-label">Type </label>
+            <select name="type_id" class="form-select" aria-label="type project select">
+                <option value="" >Select project type</option>
+                @foreach ($data_type as $type)
+                    <option @if ($type->id == old('type_id', $project->type?->id )) selected @endif
+                    value="{{ $type->id }}">
+                        {{ $type->name }} </option>
+                @endforeach
+            </select>
+        </div>
 
         <div class="mb-3">
             <label for="summary" class="form-label">Summary</label>
