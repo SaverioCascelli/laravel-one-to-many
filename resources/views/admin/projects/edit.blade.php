@@ -29,6 +29,14 @@
             @enderror
         </div>
 
+        {{-- <select name="type_id" class="form-select" aria-label="type project select">
+            <option selected>Select project type</option>
+            @foreach ($project() as )
+            <option value=""></option>
+
+            @endforeach
+        </select> --}}
+
         <div class="mb-3">
             <label for="summary" class="form-label">Summary</label>
             <input value="{{ old('summary', $project->summary) }}" type="text"
