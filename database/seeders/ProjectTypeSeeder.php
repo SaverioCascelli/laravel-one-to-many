@@ -17,9 +17,9 @@ class ProjectTypeSeeder extends Seeder
     public function run()
     {
         $data = Project::all();
-        foreach ($data as $element) {
-            $element->type_id = Type::inRandomOrder()->first()->id;
-            $element->update();
+        foreach ($data as $project) {
+            $project->type_id = Type::inRandomOrder()->first()->id;
+            $project->update();
         }
     }
 }
